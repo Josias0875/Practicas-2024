@@ -82,12 +82,13 @@ describe("Operaciones Logicas", () => {
     let x;
     let y;
     let z;
-    x=3;
+    x=5;
     y=3;
     z=4;
-    expect(x > 4).toBe(false);
+    expect(x > 4).toBe(true);
     expect(y < 5).toBe(true);
     expect(z >= 3).toBe(true);
+    x=3;
     expect(x == "3").toBe(true);
     expect(x === 3).toBe(true);
   });
