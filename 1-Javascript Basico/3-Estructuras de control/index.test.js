@@ -5,6 +5,10 @@ describe("Estructuras de control", () => {
   it("IF", () => {
     let x;
     let y;
+    x = 6;
+    if (x > 5) {
+      y = 10;
+    }
 
     expect(y).toBe(10);
   });
@@ -13,15 +17,25 @@ describe("Estructuras de control", () => {
   it("IF ELSE", () => {
     let x;
     let y;
-
-    expect(z).toBe(10);
+    x = 6;
+    if (x >= 5) {
+      y = 10;
+    } else {
+      y = 20;
+    }
+    expect(y).toBe(10);
   });
 
   //Utilizar un WHILE para que aumente el valor de "y" y disminuya el valor de "x", mientras "x" no sea 0
   it("WHILE", () => {
     let x;
     let y;
-
+    y = 0;
+    x = 10;
+    while (x > 0) {
+      x--;
+      y++;
+    }
     expect(y).toBe(10);
   });
 
@@ -29,7 +43,9 @@ describe("Estructuras de control", () => {
   it("FOR", () => {
     let x;
     let y;
-
+    for (x = 0; x < 10; x++) {
+      y++;
+    }
     expect(y).toBe(10);
   });
 
@@ -37,7 +53,32 @@ describe("Estructuras de control", () => {
   it("SWITCH", () => {
     let x;
     let y;
-
+    x = 1;
+    switch (x) {
+      case 1:
+        y = "Lunes";
+        break;
+      case 2:
+        y = "Martes";
+        break;
+      case 3:
+        y = "Miercoles";
+        break;
+      case 4:
+        y = "Jueves";
+        break;
+      case 5:
+        y = "Viernes";
+        break;
+      case 6:
+        y = "Sabado";
+        break;
+      case 7:
+        y = "Domingo";
+        break;
+      default:
+        y = "No selecciono ningun dia de la semana";
+    }
     expect(y).toBe("Lunes");
   });
 });
