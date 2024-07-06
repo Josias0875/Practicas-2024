@@ -1,4 +1,4 @@
-# Esctructuras de datos
+  # Esctructuras de datos
 
 Previamente se mencionó que además de los tipos primitivos de datos existen tipos más complejos, en esta sección ampliaremos más el tema presentando estos tipos de datos complejos.
 
@@ -24,7 +24,7 @@ arr.push("mi primer elemento");
 console.log(arr.length);
 
 // eliminamos un elemento del arreglo en la posición 1
-arrLleno.splice(1, 1);
+arrLleno.splice(1, 1); //en este caso esta eliminando la letra p de "pepe" posicion 1 contando desde 0s
 console.log(arrLleno);
 
 // nota: el método splice(pos,cant) elimina cant cantidad de elementos a partir de la posición pos

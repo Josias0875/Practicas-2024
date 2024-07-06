@@ -43,6 +43,7 @@ describe("Estructuras de control", () => {
   it("FOR", () => {
     let x;
     let y;
+    y=0;
     for (x = 0; x < 10; x++) {
       y++;
     }
