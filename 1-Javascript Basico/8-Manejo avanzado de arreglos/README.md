@@ -14,6 +14,7 @@ El metodo forEach nos permite iterar un arreglo. Recibe como parametro una funci
 El metodo forEach NO muta el arreglo original
 
 ```javascript
+//1,0,[1,2,3]
 [1, 2, 3].forEach((elemento, indice, arreglo) => {
   console.log(elemento, indice, arreglo);
 });

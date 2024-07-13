@@ -58,13 +58,16 @@ describe("Funciones", () => {
      * Programar una funcion que reciba un String str
      * Esta funcion debe retortar el mismo string pero sin espacios
      */
+    function removeSpaces(str) {
+      return str.split(" ").join("");
+  }
     expect(removeSpaces("Hola soy una cadena de caracteres")).toBe("Holasoyunacadenadecaracteres");
 
     const mayusMinus = (str) => {
       return str
         .split(" ")
         .map((word, i) => {
-          if (i % 2 == 0) return word.charAt(0).toUpperCase() + word.slice(1, word.length).toLowerCase();
+          if ((i+1) % 2 == 0) return word.charAt(0).toUpperCase() + word.slice(1, word.length).toLowerCase();
           return word.charAt(0).toLowerCase() + word.slice(1, word.length).toUpperCase();
         })
         .join(" ");
@@ -84,6 +87,24 @@ describe("Funciones", () => {
      * Ademas debe retornar error si el formato de la fecha es erroneo
      *  Nota: debe usar la clase Date() de JS
      */
+    const oldDate = (date1, date2) => {
+      
+      let arr2=[];
+      let arr3=[];
+  
+      date1.split("-").forEach((e) =>{
+       arr2.push(parseInt(e));
+      });
+      date2.split("-").forEach((e) =>{
+      arr3.push(parseInt(e));
+      });
+      for(let x=0;x<=2;x++){
+    if(arr2[x]>arr3[x]){
+      return true;
+    }else if(arr2[x]===arr3[x]){}
+    else return false;
+      }
+  };
     expect(oldDate("2022-01-01", "2020-01-01")).toBe(true);
     expect(oldDate("2022-01-01", "2023-01-01")).toBe(false);
   });

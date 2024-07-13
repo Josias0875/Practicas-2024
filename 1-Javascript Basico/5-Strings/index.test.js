@@ -88,8 +88,9 @@ describe("Strings", () => {
   it("String en Array", () => {
     let str;
     let arr;
-    str ="Hola";
-    arr = str.split("");
+    str ="Hola Soy Josias";
+    arr = str.split(" ");
+    console.log(arr);
     expect(arr.length).toBeGreaterThan(0);
   });
 });
