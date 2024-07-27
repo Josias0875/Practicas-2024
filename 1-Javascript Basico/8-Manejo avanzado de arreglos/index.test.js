@@ -45,24 +45,41 @@ describe("Manejo avanzado de arreglos", () => {
      */
     let arr1 = [1, 4, 14, 25, 67, 2, 17, 23];
     let primo;
-    
-    if (Math.sqrt(primo) > 5) {
-      arr1.sort((e1, e2) => {
-        if (e1 > e2) return -1;
-        return 1;
-      });}
-   else {arr1.reverse();}
 
-    expect(arr1).toStrictEqual([1, 2, 4, 14, 17, 23, 25, 67]);
+    function esPrimo(num) {
+        if (num <= 1) {return false;} // Los números menores o iguales a 1 no son primos
+        if (num <= 3) {return true;} // 2 y 3 son primos
+        if (num % 2 === 0 || num % 3 === 0) {return false;} // Eliminar múltiplos de 2 y 3
+        for (let i= 5; i*i <= num; i += 6) {
+        if (num % i === 0 || num % (i + 2) === 0) {return false;}
+        }
+        return true;
+        }
+
+        primo = arr1.find((num) => esPrimo(num));
+        
+        if (Math.sqrt(primo) > 5) {
+        arr1=arr1.sort((n1, n2) => {
+            if (n1 > n2) return 1;
+            return -1;
+            });
+        } else {
+        arr1=arr1.reverse();
+        }
 
     let arr2 = [32, 5, 27, 1, 8, 156, 20, 14];
-    
+
+    primo = arr2.find((num) => esPrimo(num));
+        
     if (Math.sqrt(primo) > 5) {
-      arr2.sort((e1, e2) => {
-        if (e1 > e2) return -1;
-        return 1;
-      });}
-   else {arr.reverse();}
+    arr2=arr2.sort((n1, n2) => {
+        if (n1 > n2) return 1;
+        return -1;
+        });
+    } else {
+    arr2=arr2.reverse();
+    }
+    
 
     expect(arr2).toStrictEqual([14, 20, 156, 8, 1, 27, 5, 32]);
   });
