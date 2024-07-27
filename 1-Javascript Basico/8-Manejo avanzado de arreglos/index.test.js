@@ -79,7 +79,6 @@ describe("Manejo avanzado de arreglos", () => {
     } else {
     arr2=arr2.reverse();
     }
-    
 
     expect(arr2).toStrictEqual([14, 20, 156, 8, 1, 27, 5, 32]);
   });
