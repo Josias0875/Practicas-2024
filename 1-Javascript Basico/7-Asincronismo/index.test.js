@@ -6,7 +6,8 @@ describe("asincronismo", () => {
      * Cree una promesa que se cumpla pasados 3seg
      */
 
-    const promise = new Promise();
+    const promise = new Promise((resulve)=>setTimeout(()=>resulve("success"),3000));
+
 
     promise.then((res) => expect(res).toBe("success"));
   });
@@ -14,12 +15,15 @@ describe("asincronismo", () => {
     /**
      * Consuma la misma promesa del test anterior pero utilizando async await y almacene el resultado en 'res'
      */
-
-    const promise = new Promise();
-
+    const promise = new Promise((resulve)=>setTimeout(()=>resulve("success"),3000));
     let res;
-
+    const consumirPromesa = async()=>{
+    await promise.then((rese)=>res=rese);
+    
     expect(res).toBe("success");
+  }
+    consumirPromesa();
+    
   });
   it("Consumo de API", async () => {
     /**
@@ -27,15 +31,22 @@ describe("asincronismo", () => {
      * NOTA: para buscar el trago por nombre utilice el siguienre parametro de busqueda: "Gin%20And%20Tonic"
      */
 
-    const URL = "https://www.thecocktaildb.com/api/json/v1/1/";
-
+    const URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=Gin%20And%20Tonic";
+    
+    const Asincronica = async function () {
     // response
-    let res;
+    let res = await (await fetch(URL)).json();
     // cuerpo de la response. res.json()
-    let data;
-
+    let data= res.drinks[0];
+    //data=data.drinks[0];
+    //console.log(data);
+    //console.log(data.idDrink);
+    //console.log(data.strDrink);
     expect(data.idDrink).toBe("11403");
     expect(data.strDrink).toBe("Gin And Tonic");
+    }
+    Asincronica();
+    
   });
   it("Manejo de expeciones", async () => {
     /**
@@ -45,9 +56,22 @@ describe("asincronismo", () => {
     const promise = new Promise((resolve, reject) => {
       Math.random() > 0.5 ? resolve("Buena suerte") : reject("Mala suerte");
     });
-
-    const res = "";
-
+    const Asinc= (j)=>{
+      if(j==="Buena suerte") j=":)";
+      else if(j==="Mala suerte") j=":(";
+      return j;
+    }
+    const Asincronismo= async()=>{
+      try {
+        resul=await (promise.then((pro)=>pro));
+     }catch(err){
+      resul=err;
+     }; 
+  const res=Asinc(resul); 
+  
     expect(res == ":)" || res == ":(").toBe(true);
+  
+}
+Asincronismo();
   });
 });
