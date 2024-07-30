@@ -12,6 +12,52 @@ describe("Juegos con arreglos", () => {
      * Dada una funcion numberSpiral(n) donde n es un numero entero
      * La funcion debe retornar una matriz que simule una espiral de numeros desde 1 hasta n
      */
+const numberSpiral = (number) => {
+      let arr1 = [-1, -1, -1];
+      let arr2 = [-1, -1, -1];
+      let arr3 = [-1, -1, -1];
+      let matriz = [arr1, arr2, arr3];
+
+      //[x][y]
+      if (number > 9) return matriz;
+      let x = 1;
+      let y = 1;
+      for (z = 1; z <= number; z++) {
+        matriz[x][y] = z;
+        switch (z) {
+          case 1:
+            y++;
+            break;
+          case 2:
+            x--;
+            break;
+          case 3:
+            y--;
+            break;
+          case 4:
+            y--;
+            break;
+          case 5:
+            x++;
+            break;
+          case 6:
+            x++;
+            break;
+          case 7:
+            y++;
+            break;
+          case 8:
+            y++;
+            break;
+        }
+      }
+
+      //console.table(matriz);
+      return matriz;
+    };
+
+    
+
 
     expect(numberSpiral(9)).toStrictEqual([
       [5, 4, 3],
