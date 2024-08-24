@@ -11,7 +11,7 @@ const matriz = () => {
   let matrix =[arr1,arr2,arr3];
   return matrix;
 }
-
+//79
 //verifica si gano ...
 const gano = (tablero,word) => { 
   
@@ -37,7 +37,7 @@ const con = (tablero,x,y) => {
 }
 
 //Ejecuta las acciones necesarias para jugar el Ta-Te-Ti
-const jugar = async() => { //se deberia de verasi
+const jugar = async() => { 
   let tablero=matriz(); //crea matriz 3x3 en la cual se colocara la X o la O
   let x,y; //posicion en el tablero
   let jugador; //player 1 o 2
