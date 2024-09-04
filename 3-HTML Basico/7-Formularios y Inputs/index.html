@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><span>Informacion Personal</span></h2>
+
+    <form>
+        <label><span>Nombre:</span></label>
+        <input type="text" placeholder="Ingrese su Nombre" required /><br><br>
+        
+        
+        <label><span>Apellido:</span></label>
+        <input type="text" placeholder="Ingrese su Apellido" required /><br><br>
+        
+        <label><span>Direccion:</span></label>
+        <input type="text" placeholder="Ingrese su Direccion" required /><br><br>
+        
+        <label><span>Fecha de Nacimiento:</span></label>
+        <input type="date" placeholder="Fecha de Nacimiento" required /><br><br>
+
+        <label><span>DNI:</span></label>
+        <input type="text" pattern="\d{8}" title="El DNI debe tener 8 dígitos" placeholder="Ingrese su DNI" required /><br><br>
+ 
+        <label>CUIL:</label> 
+        <input type="text"  pattern="\d{11}" title="El CUIL debe tener 11 dígitos" placeholder="Ingrese su CUIL" required><br><br>
+
+        <label><span>Telefono:</span></label>
+        <input type="tel" pattern="\d{10}" title="El n° de telefono sin guion" placeholder="Ingrese su Telefono" required /><br><br>
+
+        <label >Email   :</label>
+        <input type="email" placeholder="Ingrese su Gmail" required /><br><br>
+            
+        <input type="submit" value="Enviar" />
+    </form>
+    
+</body>
+</html>
