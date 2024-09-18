@@ -48,12 +48,12 @@
     margin-right: 40px;
     margin-left: 0px;
     
-    width: 150px;            /* Ancho del 100% del contenedor padre */
-    min-width: 100px;        /* El ancho mínimo es de 200 píxeles */
+    width: 150px;          
+    min-width: 100px;      
     max-width: 300px;
     
-    height: 30px;            /* Altura del 100% del contenedor padre */
-    min-height: 0px;       /* La altura mínima es de 100 píxeles */
+    height: 30px;          
+    min-height: 0px;       
     max-height: 100px;
     
     
@@ -74,12 +74,11 @@
     margin-right: 40px;
     margin-left: 20px;
     
-    width: 250px;            /* Ancho del 100% del contenedor padre */
-    min-width: 100px;        /* El ancho mínimo es de 200 píxeles */
+    width: 250px; 
+    min-width: 100px;      
     max-width: 300px;
-    
-    height: 120px;            /* Altura del 100% del contenedor padre */
-    min-height: 100px;       /* La altura mínima es de 100 píxeles */
+    height: 120px;            
+    min-height: 100px;       
     max-height: 300px;
 
     overflow: auto;
