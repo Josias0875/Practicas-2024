@@ -6,6 +6,8 @@ Bienvenidos al maravilloso mundo de las Hojas de Estilo en Cascada (Cascading St
 
 Basicamente a casi todo, cualquier etiqueta que entienda el atributo "class" se le pueden aplicar estilos y no solo eso sino que se le pueden aplicar estilos a la etiqueta misma de la siguiente manera:
 
+ 
+
 ```css
 div {
   background-color: red;
@@ -39,9 +41,12 @@ div {
 Hacer esto es tan simple como agregar una etiqueta especial. Dentro de la etiqueta <head>, tenemos que agregar una etiqueta <link> con la ruta al archivo CSS, ejemplo:
 
 ```html
+
 <link rel="stylesheet" href="ruta/al/archivo/estilos.css" />
+  
 ```
 
 # Tarea
 
 Crear un archivo HTML con etiquetas varias y asignarle a cada una un fondo distinto (utilicen distintas propiedades de fondo)
+ 

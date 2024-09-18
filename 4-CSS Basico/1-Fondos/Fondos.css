@@ -1,0 +1,39 @@
+#Titulo {   
+    background-image: url("nah\,i\'d\ win.png");
+    background-position: center; 
+    background-size: 160px 160px;
+    background-repeat: repeat-x;
+
+    font-size: 90px;
+    color: rgba(255, 0, 0,0.8);
+}
+
+.style {
+    
+  background: rgba(0, 128, 0, 0.3);
+  background-repeat: repeat-x;
+
+
+}
+
+span {
+
+    color:azure;
+    background: rgb(0, 162, 255);
+    background-repeat: repeat-x;
+}
+.domain{
+
+    font-size: 180px;
+    color:red;
+    background-image: url("dpmanin.jpg");
+    background-position: center;
+    background-repeat: no-repeat  ;
+    
+}
+p {
+    color:azure;
+    background-color: rgb(255, 0, 0);
+}
+
+

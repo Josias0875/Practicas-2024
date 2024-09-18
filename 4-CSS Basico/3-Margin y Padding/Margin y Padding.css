@@ -1,0 +1,48 @@
+#Titulo {
+    text-align: center;
+    border-style: solid double solid double;
+    border-width: 15px; /* Todos los bordes son de 10px */
+    border-color: red;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.Titulo {
+
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    background-color: aqua;
+    border-bottom: 2px solid green;/* Borde inferior */
+    
+}
+.titu {
+    color: blue;
+    border-bottom: 2px solid red;
+    font-size: 25px;
+}
+
+.nombre {
+
+    border: 5px solid red;
+    background-color: orange;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+.nombre2 {
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-right: 40px;
+    margin-left: 0px;
+
+}

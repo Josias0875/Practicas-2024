@@ -1,0 +1,26 @@
+#Titulo {
+    text-align: center;
+    border-style: solid double solid double;
+    border-width: 15px; /* Todos los bordes son de 10px */
+    border-color: red;
+}
+.Titulo {
+
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    background-color: aqua;
+    border-bottom: 2px solid green;/* Borde inferior */
+    
+}
+.titu {
+    color: blue;
+    border-bottom: 2px solid red;
+    font-size: 25px;
+}
+
+.nombre {
+
+    border: 5px solid red;
+    background-color: orange;
+
+}
