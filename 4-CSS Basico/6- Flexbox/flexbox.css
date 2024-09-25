@@ -1,0 +1,10 @@
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100vw;
+}
+.imgs {
+  height: 100%;
+  width: 10%;
+}
