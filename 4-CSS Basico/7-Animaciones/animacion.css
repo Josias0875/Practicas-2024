@@ -1,0 +1,26 @@
+.giro {
+    width: 100px;
+    height: 100px;
+    animation: slidein 3s infinite linear;
+    margin-top: 40vh;
+    margin-left: 42vw;
+
+}
+
+@keyframes slidein {
+    0% {
+        transform: rotate(0deg) scale(1);}
+    
+    25% {
+        transform: rotate(90deg) scale(1.5);}
+    
+    50% {
+        transform: rotate(180deg) scale(1);}
+    
+    75% {transform: rotate(270deg) scale(0.5);
+    }
+    
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
