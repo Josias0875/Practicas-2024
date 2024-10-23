@@ -1,0 +1,13 @@
+.flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    background-color: black;
+    }
