@@ -6,74 +6,95 @@ const matriz = () => {
   let matrix =[arr1,arr2,arr3];
   return matrix;
 }
+//verifica si gano ...
+const gano = (tablero,word) => { 
+  
+if((tablero[0][0]===word)&&(tablero[1][1]===word)&&(tablero[2][2]===word)) return "gano"; //en diagonal
+
+if((tablero[0][2]===word)&&(tablero[1][1]===word)&&(tablero[2][0]===word)) return "gano"; //en diagonal
+//verifica si gano en vertical o horizontal
+for(let y=0;y<=2;y++){
+
+  if((tablero[y][0]===word)&&(tablero[y][1]===word)&&(tablero[y][2]===word)) return "gano"; //horizontal
+  if((tablero[0][y]===word)&&(tablero[1][y]===word)&&(tablero[2][y]===word)) return "gano"; //vertical
+
+}
+return "no gano";
+}
 
 const texto = document.querySelector("#texto");
-
 texto.addEventListener("click", () => {
   texto.innerHTML = "Turno de jugador "+ jugador;
 });
 
+const botones = document.querySelectorAll(".boton");
+let turno=1;
+let letra="X";
+let tablero=matriz();
+let ganador;
 
-
-const jugar = async() => { 
-  let z=1;
-  let jugador=0;
-  tablero=matriz();
-  while(z<=9)
-  {
-    jugador++;
-    
-  texto.innerHTML = "Turno de jugador "+ jugador;
-    if( z%2 == 0 ) {
-      letra="O";
-    }
-    else {
-      letra="X";
-    }
-    
-    const botones = document.querySelectorAll(".boton");
-  
       botones.forEach((boton,i) => {
+
         boton.addEventListener("click", () => {
-          boton.innerHTML = letra;
-        });
-        if(i<=2){tablero[i][0]=botones[i].innerHTML;}
-        else if(i<=5){tablero[i-3][1]=botones[i].innerHTML;}
-        else if(i<=8){tablero[i-6][2]=botones[i].innerHTML;}
-      
-      });
-
-      
-      
-
-        for(let i=0;i<=9;i++)
-        {
           
-          if(i<=2){
-            tablero[i][0]=botones[i].innerHTML;
-            if(tablero[i][0]==Letra){
-              i=10;
-            }
+          if(boton.innerHTML==="X"|| boton.innerHTML==="O"){
+            alert("La casilla ya fue seleccionada ,seleccione otra");
+            return;
           }
-          
-        else if(i<=5){
-          tablero[i-3][2]=botones[i].innerHTML;
-            if(tablero[i-3][2]==Letra){
-              i=10;
-            }
-        }
-        else if(i<=8){
-          tablero[i-6][2]=botones[i].innerHTML;
-            if(tablero[i-6][2]==Letra){
-              i=10;
-            }
-            else if(i==8){i=0;}
-        }
 
-        }
-        
-    
-    z++;
-  }
-}
-jugar();
+          boton.innerHTML = letra;
+
+          switch(boton.id)
+          {
+            case "1":
+               tablero[0][0]=letra;
+            break;
+            case "2":
+               tablero[0][1]=letra;
+            break;
+            case "3":
+               tablero[0][2]=letra;
+            break;
+            case "4":
+               tablero[1][0]=letra;
+            break;
+            case "5":
+               tablero[1][1]=letra;
+            break;
+            case "6":
+               tablero[1][2]=letra;
+            break;
+            case "7":
+               tablero[2][0]=letra;
+            break;
+            case "8":
+               tablero[2][1]=letra;
+            break;
+            case "9":
+               tablero[2][2]=letra;
+            break;
+          }
+          ganador=gano(tablero,letra);
+
+          if(ganador==="gano"){
+            alert(`El jugador ${letra} Gano`);
+            return;
+          }
+
+          turno++;
+          if(turno===10){
+            alert("Hubo un empate");
+            return;
+          }
+
+          if( turno%2 == 0 ) {
+            letra="O";
+            
+          }
+          else {
+            letra="X";
+          }
+          texto.innerHTML = "Turno de jugador "+ letra;
+        });
+       
+      });
