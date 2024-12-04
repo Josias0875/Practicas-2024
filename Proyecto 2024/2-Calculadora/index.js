@@ -7,8 +7,8 @@ let ultimoCaracter;
 botone.addEventListener("click", () => {
     console.log(botone.innerHTML);
     if ((botone.innerHTML)=='='){
-        p1.innerHTML=p2.innerHTML;
-        p2.innerHTML=eval(p2.innerHTML);
+        p1.innerHTML=p2.innerHTML; //pantalla superior
+        p2.innerHTML=eval(p2.innerHTML);  //pantalla de abajo
         
     }
     
@@ -19,10 +19,12 @@ botones.forEach((boton) => {
         ultimoCaracter = p2.innerHTML.slice(-1); //basicamente devuelve el ultimocaracter del string p2
 
         if ((boton.innerHTML)=='c'){ //tecla para eliminar todo lo que hay en la pantalla p2
+            p1.innerHTML='';
             p2.innerHTML='';
         }
-        else if(p2.innerHTML=='NaN'||p2.innerHTML=='Infinity'){
+        else if(p2.innerHTML=='NaN'||p2.innerHTML=='Infinity'||p2.innerHTML=='ERRORRR!!'){
             alert("Precione 'c' para comenzar devuelta")
+            p2.innerHTML='ERRORRR!!'
             return;
         }
         else if((boton.innerHTML)=='&lt;-') //boton para eliminar solo  un numero
